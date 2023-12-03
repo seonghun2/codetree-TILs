@@ -3,18 +3,20 @@ arr = []
 for _ in range(n):
     arr.append(list(map(int,input().split())))
 
-arr.sort(key = lambda x : -x[1])
 ans = 0
 
-for i in range(n):
-    time = arr[i][0]
-    pay = arr[i][1]
-    for j in range(i+1, n):
-        if time + arr[j][1] > n:
-            break
-        else:
-            time += arr[j][1]
-            pay += arr[j][0]
-    ans = max(ans, pay)
+def dfs(day, income):
+    global ans
+
+    if day > n :
+        return
+    elif day == n :
+        ans = max(ans, income)
+        return
+
+    dfs(day+1, income)
+    dfs(day + arr[day][0], income + arr[day][1])
+
+dfs(0, 0)
 
 print(ans)
