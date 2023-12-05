@@ -1,6 +1,6 @@
 n = int(input())
+# arr = [[491, 96],[500, 967],[311, 878],[53, 720],[634, 728],[380, 570],[55, 682]]
 arr = []
-
 for _ in range(n):
     arr.append(list(map(int, input().split())))
 
@@ -25,9 +25,8 @@ def makeLine(cur):
 
 def isOverlap(lines):
     for i in range(len(lines)-1):
-        for j in range(i+1, len(lines)):
-            if lines[i][1] >= lines[j][0]:
-                return False
+        if lines[i][1] >= lines[i+1][0]:
+            return False
     return True
 
 makeLine(0)
