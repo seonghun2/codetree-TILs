@@ -5,7 +5,7 @@ for _ in range(n):
     arr.append(list(map(int, input().split())))
 
 selectedLine = []
-selectedLine.sort(key = lambda x : (x[0], x[1]))
+selectedLine.sort(key = lambda x : x[0])
 ans = 0
 
 def makeLine(cur):
@@ -25,8 +25,9 @@ def makeLine(cur):
 
 def isOverlap(lines):
     for i in range(len(lines)-1):
-        if lines[i][1] >= lines[i+1][0]:
-            return False
+        for j in range(i+1, len(lines)):
+            if lines[i][1] >= lines[j][0]:
+                return False
     return True
 
 makeLine(0)
