@@ -5,12 +5,14 @@ for _ in range(n):
     arr.append(list(map(int, input().split())))
 
 selectedLine = []
-selectedLine.sort(key = lambda x : x[0])
+selectedLine.sort(key = lambda x : (x[0], x[1]))
 ans = 0
 
 def makeLine(cur):
     global ans
+
     if cur == n :
+        # print(selectedLine)
         if isOverlap(selectedLine):
             ans = max(ans, len(selectedLine))
         return
