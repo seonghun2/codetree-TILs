@@ -13,9 +13,7 @@ def makeLine(cur):
     global ans
 
     if cur == n :
-        selectedLine.sort(key = lambda x : x[0])
-        if isOverlap(selectedLine):
-            # print(selectedLine)
+        if isOverlap(sorted(selectedLine)):
             ans = max(ans, len(selectedLine))
         return
     
