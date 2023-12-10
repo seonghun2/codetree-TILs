@@ -10,13 +10,12 @@ for i in sorted_arr:
 
 for i in range(n):
     if arr[i] == second_num:
-        
         if ans != 0:
             ans = -1
             break
         ans = i+1
 
-if n==1:
+if second_num == 0:
     ans = -1
 
 print(ans)
