@@ -25,4 +25,4 @@ for x in range(2, R, 2):
 
     ans = min(ans, max(a,b,c,d))
 
-print(N//4+1)
+print(ans)
