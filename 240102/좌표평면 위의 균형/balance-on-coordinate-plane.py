@@ -3,12 +3,17 @@ import sys
 N, R = map(int, input().split())
 arr = []
 ans = sys.maxsize
-
 for _ in range(N):
     arr.append(list(map(int, input().split())))
-
-for x in range(2, R, 2):
-    for y in range(2, R, 2):
+maxX = 0
+for i in arr:
+    maxX = max(maxX, i[0])
+maxY = 0
+for i in arr:
+    maxY = max(maxY, i[1])
+    
+for x in range(2, maxX, 2):
+    for y in range(2, maxY, 2):
         a = 0
         b = 0
         c = 0
