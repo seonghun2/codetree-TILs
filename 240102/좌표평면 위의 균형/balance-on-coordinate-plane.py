@@ -23,6 +23,6 @@ for x in range(2, R, 2):
             elif point[0] < x and point[1] < y:
                 d += 1
 
-    ans = min(ans, max(a,b,c,d))
+        ans = min(ans, max(a,b,c,d))
 
 print(ans)
