@@ -33,7 +33,8 @@ int main() {
             cin >> s >> e;
             for (int i = s-1; i < e; i++) {
                 cout << arr[i] << " ";
-            } 
+            }
+            cout << endl; 
         }
 
     }
