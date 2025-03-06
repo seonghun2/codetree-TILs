@@ -1,4 +1,5 @@
 #include <iostream>
+#include <limits.h>
 
 using namespace std;
 
@@ -11,7 +12,7 @@ int main() {
         cin >> A[i];
     }
 
-    int max1 = 0, max2 = 0;
+    int max1 = INT_MIN, max2 = INT_MIN;
     int maxIndex;
     for (int i = 0; i < N; i++) {
         if (A[i] >= max1){
