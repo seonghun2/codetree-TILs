@@ -13,20 +13,19 @@ int main() {
 
     for (int i = 0; i < Q; i++) {
         cin >> type;
-        string tmpString = str;
         if (type == 1) {
             cin >> a >> b;
-            char tmp = tmpString[a-1];
-            tmpString[a-1] = tmpString[b-1];
-            tmpString[b-1] = tmp;
-            cout << tmpString << endl;
+            char tmp = str[a-1];
+            str[a-1] = str[b-1];
+            str[b-1] = tmp;
+            cout << str << endl;
         }
         else if (type == 2) {
             cin >> x >> y;
-            for(int i = 0; i < tmpString.length(); i ++) {
-                if(tmpString[i] == x) tmpString[i] = y;
+            for(int i = 0; i < str.length(); i ++) {
+                if(str[i] == x) str[i] = y;
             }
-            cout << tmpString << endl;
+            cout << str << endl;
         }    
     }
     return 0;
