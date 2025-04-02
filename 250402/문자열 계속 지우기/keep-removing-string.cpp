@@ -15,9 +15,10 @@ int main() {
             if (ans.substr(i, B.length()) == B) {
                 ans = ans.erase(i, B.length());
                 find = true; 
+                break;
             }
         }
-        if (find == false) break;
+        if (find == false || ans.length() == 0) break;
     }
 
     cout << ans;
