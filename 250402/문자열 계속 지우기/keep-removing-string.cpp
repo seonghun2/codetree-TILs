@@ -11,14 +11,15 @@ int main() {
     
     while (true) {
         bool find = false;
+        if(ans.length() < B.length()) break;
         for (int i = 0; i < ans.length() - B.length() + 1; i++) {
             if (ans.substr(i, B.length()) == B) {
                 ans = ans.erase(i, B.length());
-                find = true; 
+                find = true;
                 break;
             }
         }
-        if (find == false || ans.length() == 0) break;
+        if (find == false ) break;
     }
 
     cout << ans;
